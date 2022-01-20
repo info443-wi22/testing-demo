@@ -23,7 +23,6 @@ function App(props) {
         copy.complete = !copy.complete;
       return copy; //put copy in the mapped list
     })
-    console.log(updatedTasks);
     setTasks(updatedTasks)
   }
 
@@ -33,6 +32,7 @@ function App(props) {
 
   return (
     <div className="container">
+      <h1>To Do List</h1>
       <p className="lead">
         Num things I have to do: <strong>{incompleteArray.length}</strong>
       </p>

@@ -11,7 +11,7 @@ export function AddTaskForm(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Submitting: ", inputtedValue)
+    // console.log("Submitting: ", inputtedValue)
 
     props.addTaskCallback(inputtedValue)
     setInputtedValue("");
