@@ -1,9 +1,15 @@
 import React from 'react';
 
+import { useSelector, useDispatch } from 'react-redux'
+import tasksSlice from '../redux/taskSlice';
+
 export function Task({ task, clickCallback }) { 
+
+	const dispatch = useDispatch()
 	
   const handleClick = () => {
-    clickCallback(task.id)
+		dispatch(tasksSlice.actions.toggleComplete(task.id))
+    //clickCallback(task.id)
   }
   
   //some data processing
